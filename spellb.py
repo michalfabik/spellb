@@ -136,7 +136,7 @@ class SpellB():
             except EOFError:
                 pass
         rnd_candidate = list(candidates[random.randint(0, len(candidates)-1)])
-        self.letter_pool = ''.join((random.sample(rnd_candidate, k=len(rnd_candidate))))
+        self.letter_pool = ''.join(random.sample(rnd_candidate, k=len(rnd_candidate)))
 
     def validate_letter_pool(self, pool):
         if not pool.isalpha() or not pool.isascii():
